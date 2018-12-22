@@ -1,0 +1,15 @@
+Checklist tutor environment:
+1 - Access to GitHub:
+	1.1 - On https://github.com/brunoitconsultant (passord: R!ta.03101)
+
+
+Checklist student environment:
+
+1 - PC with Windows and internet conectivity
+2 - Sublime Text 3 - install free evaluation from https://www.sublimetext.com/
+3 - Sublime Merge
+	3.1 Install free evaluation from https://www.sublimemerge.com/download
+	3.2 Clone HTML5 Class Repository from: https://github.com/brunoitconsultant/HTML5.git
+
+Other:
+	- Access to Git to share code and class materials.

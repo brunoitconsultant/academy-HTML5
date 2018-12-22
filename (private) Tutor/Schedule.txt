@@ -1,0 +1,34 @@
+﻿https://www.cecwellington.ac.nz/courses/1321-web-design-and-development
+ROOM: COM2B
+
+Course #1
+	Session 1: 	Wed, 13 Feb 	(19:30 – 21:30)
+	Session 2: 	Wed, 20 Feb 	(19:30 – 21:30)
+	Session 3: 	Wed, 27 Feb 	(19:30 – 21:30)
+	Session 4: 	Wed, 06 Mar 	(19:30 – 21:30)
+	Session 5: 	Wed, 13 Mar	(19:30 – 21:30)
+	Session 6: 	Wed, 20 Mar 	(19:30 – 21:30)
+-------------------------------------------------------
+Course #2
+	Session 1: 	Tue, 07 May 	(19:30 – 21:30)
+	Session 2: 	Tue, 14 May 	(19:30 – 21:30)
+	Session 3: 	Tue, 21 May 	(19:30 – 21:30)
+	Session 4: 	Tue, 28 May 	(19:30 – 21:30)
+	Session 5: 	Tue, 04 Jun 	(19:30 – 21:30)
+	Session 6: 	Tue, 11 Jun 	(19:30 – 21:30)
+-------------------------------------------------------
+Course #3
+	Session 1: 	Thu, 01 Aug 	(18:30 – 20:30)
+	Session 2: 	Thu, 08 Aug 	(18:30 – 20:30)
+	Session 3: 	Thu, 15 Aug 	(18:30 – 20:30)
+	Session 4: 	Thu, 22 Aug 	(18:30 – 20:30)
+	Session 5: 	Thu, 29 Aug 	(18:30 – 20:30)
+	Session 6: 	Thu, 05 Sep 	(18:30 – 20:30)
+-------------------------------------------------------
+Course #4
+	Session 1: 	Wed, 16 Oct 	(19:30 – 21:30)
+	Session 2: 	Wed, 23 Oct 	(19:30 – 21:30)
+	Session 3: 	Wed, 30 Oct 	(19:30 – 21:30)
+	Session 4: 	Wed, 06 Nov 	(19:30 – 21:30) 
+	Session 5: 	Wed, 13 Nov 	(19:30 – 21:30)
+	Session 6: 	Wed, 20 Nov 	(19:30 – 21:30)
