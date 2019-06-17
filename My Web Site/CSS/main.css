@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter|Shadows+Into+Light&display=swap');
+body{
+	background-color: rgb( 246, 247, 237 );
+	font-family: Tahoma, Arial;
+	margin-top: 20px;
+}
+#main-header{
+	background-color: rgb( 108, 100, 139 );
+	color: rgb( 249, 249, 249 );
+	height: 150px;
+	border-bottom: 6px dashed darkgrey;
+}
+#main-section{
+	background-color: #E5E5E5;
+	font-family: 'Bitter', Tahoma;
+	height: 155px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 0px;
+	padding-right: 0px;
+	background-image: url('../IMG/image.jpg');
+	background-repeat: no-repeat;	
+	background-size: cover;
+	background-position: 0px -30px; 
+}
+#menu{
+	height: 100%;
+	float: right;							/* Floats the Element (the menu) to the right*/
+}
+#menu a{
+	color: rgb( 128, 255, 109 );
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase; 
+}
+#menu a:hover{
+	color: red;								/* Changes the color of the text to red, when the mouse is over the text.*/
+}
+#menu li{
+	display: inline-block;
+	padding-right: 20px;
+}
+#another-section{
+	background-color: rgb( 206, 226, 43 );
+	float: left;
+	height: 270px;
+	width: 80%;
+}
+#another-section h4{
+	font-family: 'Shadows Into Light', Tahoma; 
+	font-size: 25px;
+}
+.article{
+	background-color: rgb( 255, 157, 53 );
+	display: inline-block;
+	height: 180px;
+	width: 49%;
+	margin-top: 15px;
+}
+#aside{
+	background-color: rgb( 42, 222, 226 );
+	float: right;
+	height: 270px;
+	width: 19%;
+	border-radius: 25px;
+}
+#footer{
+	background-color: rgb( 39, 82, 84 );
+	color: rgb( 249, 249, 249 );
+	height: 150px;
+	margin-top: 20px; 
+}
+.clear{										/* Intends to be used generically in the Web Page, resets the floating effect.*/
+	clear: both;
+}
+.container{									/* Intends to be used generically in the Web Page, and centers the elements in it in the page.*/
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+.company-brand{
+	float: left;							/* Floats the Element (in this case a H1) to the Left*/
+	padding-left: 50px;						/* Increases the Padding (left) by 50 pixels*/
+
+	height: 100%;							/* (required for .demo1-vertical-center) */
+	position: relative;						/* (required for .demo1-vertical-center) */
+}
+.demo1-vertical-center{						/* using old school Positioning: Absolute / Relative*/
+	margin: 0px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.demo2-vertical-center{						/* using "FlexBox" (new way of layering out Web Pages)*/
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

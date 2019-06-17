@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Layout Demos</title>
+	<link rel="stylesheet" type="text/css" href="CSS/layout-demos.css">
+	
+	<style type="text/css">
+
+
+		/***   (START)  CSS  SETUP	--> TO MAKE THE PAGE LOOK PREETY*/
+		@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina&display=swap');
+		* {
+		  margin: 0px;
+		  padding: 0px;
+		}
+		html{
+		  background: rgb(237, 243, 255);
+		  font-family: 'Baloo Bhaina', Tahoma;
+		}
+		.section{
+		  background: rgba(19, 148, 196);
+		  margin: 7em auto;
+		  width: 70vw;
+		  height: 80vh;
+		  box-shadow: 0 0 1em rgba(0,0,0,0.6);
+		  border-radius: 15px;
+		}
+		.section h1, .viewport-unit h1, .text-unit h1, #grid-main-section{
+		  padding-top: 15px;
+		  color: white;
+		}
+		.viewport-unit p{
+			font-family: Tahoma;
+		}
+		.container{
+		  width: 80%;
+		  margin: auto;
+		  text-align: center;
+		}
+		.box{
+		  border: 1px solid yellow;
+		  width: 75px;
+		  height: 75px;
+		}
+		.box-1{
+		  background: rgb( 108, 100, 139 );
+		  color: rgb( 249, 249, 249 );
+		}
+		.box-2{
+		  background: #E5E5E5;
+		}
+		.box-3{
+		  background: rgb( 206, 226, 43 );
+		}
+		.box-4{
+		  background: rgb( 255, 157, 53 );
+		}
+		.box-5{
+		  background: rgb( 42, 222, 226 );
+		}
+		.box-6{
+		  background: rgb( 39, 82, 84 );
+		}
+		.clear-fix{
+		  clear:both;
+		}
+		/***   (END)  CSS  SETUP*/
+
+
+
+
+
+
+
+
+
+
+		/**     USING VIEW-PORT UNITS      **/
+		.viewport-unit{
+			background: rgb( 206, 226, 43 );
+			height: 1000px;					/*or in vh*/
+			padding: 0px;					/*or in vw*/
+			margin: 0px;					/*or in vw*/
+		}
+		.viewport-unit img{
+			width: 300px;					/*or in vh / vw*/
+			padding-right: 20px;
+			float: left;
+		}
+		.viewport-unit p{
+			height: 40%;					/*or in vh / vw / vmax / vmin*/
+			font-size: 16px;				/*or in vh / vw*/
+			background: orange;	
+			padding-bottom: 5px;			/*vmax or vmin*/
+		}
+
+
+
+
+
+
+
+
+
+
+		/**     USING TEXT UNITS      **/
+		.text-unit{
+			background: rgba(19, 148, 196);
+			height: 100vh;
+			font-size: 16px;
+		}
+		.double-size {
+			font-size: 2em;
+		}
+		.text-unit-rem{
+			font-size: 2rem;	
+		}
+
+
+
+
+
+
+
+
+
+
+		/**     USING FLOATS      **/
+		#float-box-1{
+		    float: left;
+		}
+		#float-box-2{
+		  float: right;
+		} 
+		#float-box-3{
+		/*   float: right; */
+		  width: 15em;
+		  opacity: 0.6;
+		}
+
+
+
+
+
+
+
+
+
+
+		/**     USING INLINE BLOCK      **/
+		#inline-block-container div{
+		  display: inline-block;
+		}
+
+
+
+
+
+
+
+
+
+
+		/**     USING POSITION      **/
+		#position-container{
+		  position: relative;
+		}
+		#position-box-1{
+		  position: absolute;
+		  top: 25px;
+		  left: 25px;
+		}
+		#position-box-2{
+		  position: absolute;
+		  top: 55px;
+		  left: 55px;
+		  z-index: 2;
+		}
+		#position-box-3{
+		  position: absolute;
+		  top: 85px;
+		  left: 85px;
+		  z-index: 1;
+		}
+
+
+
+
+
+
+
+
+
+
+		/**     USING GRID      **/
+		/*	Great article:
+			https://css-tricks.com/snippets/css/complete-guide-grid/
+		*/
+
+		#grid-container{
+			display: grid;
+			grid-template-rows: 4em 20vh 30vh 3em;
+			grid-template-columns: 0.1fr 4fr 2fr 0.1fr;
+			grid-template-areas: 
+			     "header header header header"     
+			    "main main main main"
+			    ". section aside ."
+			    "footer footer footer footer";
+		    grid-gap: 5px;
+		}
+		#grid-container *{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#grid-header{
+		  grid-area: header;
+		}
+		#grid-main-section{
+		  grid-area: main;
+		  background: url('IMG/repeat.jpg');
+		}
+		#grid-section{
+			grid-area: section;
+		  	padding: 0.5em;
+
+			display: grid;
+			grid-template-rows: 1fr 3fr 1.5fr;
+			grid-template-columns: 1fr 2fr;
+			grid-template-areas: 
+				"aside article1"
+		    	"aside article2"
+				"aside .";
+			grid-gap: 10px;
+			align-items: stretch;
+		}
+		#grid-section-title{
+			grid-area: aside;	
+		}
+		#article1{
+			grid-area: article1;
+		}
+		#article2{
+			grid-area: article2;
+		}
+		#grid-aside{
+		  grid-area: aside;
+		}
+		#grid-footer{
+		  grid-area: footer;
+		}
+
+
+
+
+
+
+
+
+
+
+		/**     USING MEDIA QUERIES     **/
+		#mini-grid-container{
+			display: grid;
+			grid-template-rows: 10vh 25vh;
+			grid-template-columns: 2fr 1fr;
+			grid-template-areas: 
+			     "header header"     
+			    "section aside";
+		    grid-gap: 10px;
+		    align-items: stretch;
+		}
+		#mini-grid-container *{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#mini-grid-header{
+		  grid-area: header;
+		}
+		#mini-grid-section{
+			grid-area: section;
+		  	padding: 0.5em;
+
+			display: grid;
+			grid-template-rows: 1fr 3fr;
+			grid-template-columns: 1fr 2fr;
+			grid-template-areas: 
+				"aside article1"
+		    "aside article2";
+			grid-gap: 10px;
+			align-items: stretch;
+		}
+		#mini-article1{
+			grid-area: article1;
+		}
+		#mini-article2{
+			grid-area: article2;
+		}
+		#mini-grid-aside{
+		  grid-area: aside;
+		}
+
+		@media (max-width: 700px) {
+			#mini-grid-container{
+				display: grid;
+				grid-template-rows: 10vh 25vh 25vh;
+				grid-template-columns: 1fr;
+				grid-template-areas: 
+				     "header"     
+				    "section"
+				    "aside";
+			    grid-gap: 10px;
+			    align-items: stretch;
+			}
+		}
+	</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+  <!--     USING VIEWPORT UNITS      -->
+  <div class="viewport-unit">
+  	<h1 class="container">Viewport (More on Units)</h1>
+  	<img src="IMG/image.jpg">
+  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non
+  	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non
+  	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  <div class="clear-fix"></div>
+
+
+
+
+
+
+
+
+
+
+  <!--     USING TEXT UNITS (rem / em)      -->
+  <div class="text-unit">
+  	<h1 class="container">Font-Sizes (More on Units)</h1>
+  		<p>Monday</p>
+  		<div class="double-size">
+  			<p>Tuesday</p>
+			<div class="double-size">
+				<p>Wednesday</p>
+				<p class="text-unit-rem">Thursday</p>
+			</div>
+  		</div>
+  		</div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!--     USING FLOATS      -->
+  <div class="section">
+    <h1 class="container">Floats</h1>
+    <div class="container">
+      <div id="float-box-1" class="box box-1"></div>
+      <div id="float-box-2" class="box box-2"></div>
+      <div class="clear-fix"></div>
+      <div id="float-box-3" class="box box-3"></div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!--     USING INLINE-BLOCK      -->
+  <div class="section">
+    <h1 class="container">Inline-Block</h1>
+    <div id="inline-block-container" class="container">
+      <div class="box box-1"></div>
+      <div class="box box-2"></div>
+      <div class="box box-3"></div>
+    </div>
+  </div>  
+
+
+
+
+
+
+
+
+
+
+  <!--     USING POSITION ABSOLUTE / RELATIVE      -->
+  <div class="section">
+    <h1 class="container">position: Absolute / Relative</h1>
+    <div id="position-container" class="container">
+      <div id="position-box-1" class="box box-1"></div>
+      <div id="position-box-2" class="box box-2"></div>
+      <div id="position-box-3" class="box box-3"></div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+	<!--     USING GRID      -->
+  <div class="section">
+    <h1 class="container">CSS GRID</h1>
+    <div id="grid-container" class="container">
+      <header id="grid-header" class="box-1">Header</header>
+      <section id="grid-main-section" class="box-2"><h2>Main Section</h2></section>
+      <section id="grid-section" class="box-3">
+      	<h4 id="grid-section-title" class="box-2">Another Section</h4>
+		<article id="article1" class="box-4">Article 1</article>
+		<article id="article2" class="box-4">Article 2</article>
+      </section>
+      <aside id="grid-aside" class="box-5">Aside</aside>
+      <footer id="grid-footer" class="box-6">Footer</footer>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!--     USING MEDIA QUERIES      -->
+  <div class="section">
+    <h1 class="container">Media Queries</h1>
+    <div id="mini-grid-container" class="container">
+      <header id="mini-grid-header" class="box-1">Header</header>
+      <section id="mini-grid-section" class="box-3">
+      	<h4 id="mini-grid-section-title" class="box-2">Another Section</h4>
+		<article id="mini-article1" class="box-4">Article 1</article>
+		<article id="mini-article2" class="box-4">Article 2</article>
+      </section>
+      <aside id="mini-grid-aside" class="box-5">Aside</aside>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
